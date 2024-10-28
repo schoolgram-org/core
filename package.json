@@ -1,0 +1,42 @@
+{
+  "name": "@diary-spo/core",
+  "version": "3.1.0",
+  "author": "diary-spo",
+  "dependencies": {
+    "bun": "^1.1.27",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "bun-types": "^1.1.27",
+    "concurrently": "^9.0.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "typescript": "^5.5.4"
+  },
+  "description": "A web diary",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:api": "cd apps/api && bun dev",
+    "dev:web": "cd apps/web && bun dev",
+    "dev:admin": "cd apps/admin && bun dev",
+    "dev:all": "concurrently \"bun dev:api\" \"bun dev:web\" \"bun dev:admin\"",
+    "dev:web:preview": "cd apps/web && bun preview",
+    "dev:api:serve": "cd apps/api && bun serve",
+    "lint": "biome lint . --apply",
+    "format": "biome format . --write",
+    "checkAll": "biome check . --write --unsafe",
+    "build:web": "cd apps/web && bun run build",
+    "build:api": "cd apps/api && bun run build",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*": "bun run checkAll"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

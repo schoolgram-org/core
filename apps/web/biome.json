@@ -1,0 +1,17 @@
+{
+  "formatter": {
+    "ignore": ["./dist"]
+  },
+  "linter": {
+    "ignore": ["./dist"],
+    "rules": {
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      }
+    }
+  },
+  "extends": ["../../biome.json"]
+}
