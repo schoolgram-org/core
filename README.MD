@@ -6,13 +6,13 @@
 Клиентская часть (код)
 - React
 - TypeScript
-UI/UX (Telegram)
-  - Telegram UI
-  - Telegram Mini Apps SDK
-UI/UX (VK)
-  - VKUI
-  - VK Bridge
-  - VK Router
+* UI/UX (Telegram)
+  * Telegram UI
+  * Telegram Mini Apps SDK
+* UI/UX (VK)
+  * VKUI
+  * VK Bridge
+  * VK Router
 - Где-то Vite
 
 ### Структура проекта
