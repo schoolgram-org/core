@@ -1,0 +1,38 @@
+{
+	"cli": {
+		"version": ">= 7.0.0"
+	},
+	"build": {
+		"development": {
+			"channel": "development",
+			"developmentClient": true,
+			"distribution": "internal",
+			"env": {
+				"DEV": "true"
+			}
+		},
+		"preview": {
+			"channel": "preview",
+			"distribution": "internal",
+			"android": {
+				"buildType": "apk",
+				"gradleCommand": ":app:assembleRelease"
+			}
+		},
+		"production-ios": {
+			"channel": "production",
+			"ios": {},
+			"distribution": "internal"
+		},
+		"production": {
+			"channel": "production",
+			"android": {
+				"buildType": "apk",
+				"gradleCommand": ":app:assembleRelease"
+			}
+		}
+	},
+	"submit": {
+		"production": {}
+	}
+}
