@@ -1,18 +1,18 @@
 {
-  "name": "@diary-spo/core",
+  "name": "@schoolgram/core",
   "version": "3.1.0",
-  "author": "diary-spo",
+  "author": "schoolgram-org",
   "dependencies": {
-    "bun": "^1.1.27",
+    "bun": "^1.1.38",
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "bun-types": "^1.1.27",
-    "concurrently": "^9.0.0",
-    "husky": "^9.1.5",
+    "@biomejs/biome": "^1.9.4",
+    "bun-types": "^1.1.38",
+    "concurrently": "^9.1.0",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "description": "A web diary",
   "keywords": [],
@@ -30,7 +30,8 @@
     "checkAll": "biome check . --write --unsafe",
     "build:web": "cd apps/web && bun run build",
     "build:api": "cd apps/api && bun run build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:compile": "bun build --compile ./src/main.ts --target bun"
   },
   "lint-staged": {
     "*": "bun run checkAll"

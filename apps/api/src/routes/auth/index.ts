@@ -7,7 +7,7 @@ import logoutHandler from './logout/handler'
 export const AuthController = new Elysia({ prefix: '/auth' })
   .use(AuthModel)
   .post(
-    '/login',
+    '/webapi/getdata/auth',
     ({ body: { login, password, isHash } }) =>
       postAuth({ login, password, isHash }),
     {
