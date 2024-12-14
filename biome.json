@@ -1,0 +1,49 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "ignore": [
+      "node_modules",
+      "./apps/network-city",
+      "./apps/api/dist",
+      "./apps/admin/dist",
+      "./apps/web/dist",
+      "bun.lockb"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "none"
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "files": {
+    "maxSize": 4096000
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "style": {
+        "noParameterAssign": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
+      "recommended": true
+    },
+    "ignore": [
+      "node_modules",
+      "./apps/network-city",
+      "./apps/api/dist",
+      "./apps/admin/dist",
+      "./apps/web/dist",
+      "bun.lockb"
+    ]
+  }
+}
