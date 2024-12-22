@@ -24,12 +24,9 @@ const postAuth = async ({
   }
 
   try {
-    const rawResponse = await fetcher.post(
-      `${SERVER_URL}/login`,
-      {
-        json: { login, password, isRemember: true }
-      }
-    )
+    const rawResponse = await fetcher.post(`${SERVER_URL}/login`, {
+      json: { login, password, isRemember: true }
+    })
 
     /**
      * Если сетевой город поменял тип своего ответа, то мы бы хотели об этом узнать

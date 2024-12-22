@@ -8,4 +8,4 @@ const AppWrapper = lazy(() => import('./app/AppWrapper'))
 
 const app = document.getElementById('app')
 
-createRoot(app!).render(<AppWrapper />)
+createRoot(app || '').render(<AppWrapper />)
